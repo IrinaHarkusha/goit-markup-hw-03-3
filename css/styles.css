@@ -1,3 +1,4 @@
+/* #region main */
 :root {
     --brand-color: #434455;
     --secondary-color-text: #2E2F42;;
@@ -8,13 +9,18 @@
     --color-hover-footer: #31D0AA;
 }
 
- /* ---------------------Загальні:--------------------- */
 body {
     font-family: "Roboto", sans-serif;
     color: var(--brand-color);
     background-color: var(--white-color);
 }
-
+.container {
+    max-width: 1158px;
+    /* padding-left: 
+    padding-right: 
+    margin-left: 
+    margin-right: */
+}
 a {
     text-decoration: none;
     cursor: pointer;
@@ -22,10 +28,18 @@ a {
 li {
     list-style-type: none;
  }
+ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+ h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+}
  h2, h3 {
     color: var(--secondary-color-text);
  }
- 
+ /* #endregion main */
 
 
  /* ---------------------Ефект поточної сторінки---------------------  */
