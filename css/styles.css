@@ -14,12 +14,26 @@ body {
     color: var(--brand-color);
     background-color: var(--white-color);
 }
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .container {
     max-width: 1158px;
-    /* padding-left: 
-    padding-right: 
-    margin-left: 
-    margin-right: */
+    padding: 0 15px;
+    margin: 0 auto;
+
+    /* outline: 1px solid seagreen; */
 }
 a {
     text-decoration: none;
@@ -39,6 +53,9 @@ ul {
  h2, h3 {
     color: var(--secondary-color-text);
  }
+ .section {
+    padding: 120px 0;
+ }
  /* #endregion main */
 
 
@@ -48,12 +65,24 @@ ul {
      color: var(--color-hover);
  } */
 
- /* ---------------------Оформлення хедер--------------------- */
+/* #region Header */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .logo a:hover, .logo a:focus {
     color: var(--color-hover);
 }
+.nav {
+    display: flex;
+}
 .logotype {
+    display: flex;
+    align-items: center;
+    margin-right: 76px;
+
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -69,8 +98,14 @@ ul {
 .wrap:hover, .wrap:focus {
     color: var(--color-hover);
 }
-
+.nav-list {
+    display: inline-flex;
+    gap: 40px;
+}
 .link{
+    display: block;
+    padding: 24px 0;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -83,23 +118,32 @@ ul {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
-
     font-style: normal;
 }
-
+.item-link {
+    display: flex;
+    gap: 40px;
+}
 .list-link {
+    padding: 24px 0;
     letter-spacing: 0.02em;
 
     color: var(--brand-color);
 }
 
+/* #endregion Header */
 
-/* ------------------Баннер------------------ */
 
+/* #region Banner */
 .banner {
+    padding: 188px 0;
+    
     background-color: var(--secondary-color-text);
 }
 .banner-up{
+    width: 496px;
+    margin: 0 auto 48px auto;
+
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
@@ -110,6 +154,11 @@ ul {
 }
 
 .button {
+    display: block;
+    margin: 0 auto;
+    padding: 16px 32px;
+    border-radius: 4px;
+
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
@@ -117,6 +166,7 @@ ul {
     background-color: var(--accent-color);
     color: var(--white-color);
     border: var(--accent-color);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 
     cursor: pointer;
     
@@ -128,22 +178,22 @@ ul {
 
 }
 
+/* #endregion Banner */
 
-/* -----------------Секція принципи----------------- */
 
-.title {
-    font-size: 36px;
-    line-height: 1.11;
-    text-align: center;
-    text-transform: capitalize;
-    letter-spacing: 0.02em
+/* #region section principles */
+
+.list-wrapper {
+    display: flex;
+    gap: 24px;
 }
+.list-item {
+    width: 264px;
 
-/* .invisible {
-    visibility: hidden;
-} */
-
+}
 .wrap-text {
+    margin-bottom: 8px;
+
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -155,31 +205,77 @@ ul {
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
+/* #endregion section principles */
 
 
-/* -----------------------Секція Out Team--------------- */
+
+/* #region Out Team */
 .wrap-list {
     background-color: var(--secondary-color-logo);
+}
+.title {
+    margin-bottom: 72px;
+
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.02em
+}
+.wrapper-list {
+    display: flex;
+    gap: 24px;
+
+    width: calc((100% - 3 * 24px) / 4);
 }
 
 .card-wrap {
     background-color: var(--white-color);
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+.wrapper-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 0;
+   
 }
 
+/* #endregion Out Team */
 
 
-/* --------------------------Our Portfolio--------------- */
+/* #region Our Portfolio */
+.wrap-pic {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+}
+.pic-wrapper {
+    width: calc((100% - 2 * 24px) / 3);
 
 
+    border: 1px solid var(--CORNFLOWER, #E7E9FC);
+}
+.list-picture {
+    padding: 32px 16px;
+}
 
+/* #endregion Our Portfolio */
 
-/*------------Footer----------- */
-
+/* #region Footer */
 .logo-title {
-    background-color: var(--secondary-color-text);
-    
-}
+    padding: 100px 0;
 
+    background-color: var(--secondary-color-text); 
+}
+.qoute-link {
+    width: 264px;
+}
+.wrapper {
+    margin-bottom: 16px;
+}
 .wrapper:hover, .wrapper:focus {
     color: var(--color-hover);
 }
@@ -196,3 +292,5 @@ ul {
 
     color: var(--secondary-color-logo);
 }
+/* #endregion Footer */
+
