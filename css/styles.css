@@ -56,6 +56,9 @@ ul {
  .section {
     padding: 120px 0;
  }
+ img {
+    display: block;
+ }
  /* #endregion main */
 
 
@@ -70,6 +73,8 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    border-bottom: 1px solid var(--CORNFLOWER, #E7E9FC);
 }
 
 .logo a:hover, .logo a:focus {
@@ -77,6 +82,7 @@ ul {
 }
 .nav {
     display: flex;
+    align-items: center;
 }
 .logotype {
     display: flex;
@@ -141,7 +147,7 @@ ul {
     background-color: var(--secondary-color-text);
 }
 .banner-up{
-    width: 496px;
+    max-width: 496px;
     margin: 0 auto 48px auto;
 
     font-weight: 700;
@@ -158,6 +164,7 @@ ul {
     margin: 0 auto;
     padding: 16px 32px;
     border-radius: 4px;
+    min-width: 169px;
 
     font-weight: 500;
     line-height: 1.5;
@@ -193,6 +200,7 @@ ul {
 }
 .wrap-text {
     margin-bottom: 8px;
+    align-items: center;
 
     font-weight: 500;
     font-size: 20px;
@@ -201,6 +209,8 @@ ul {
 }
 
 .text {
+    align-items: center;
+
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -225,11 +235,11 @@ ul {
 .wrapper-list {
     display: flex;
     gap: 24px;
-
-    width: calc((100% - 3 * 24px) / 4);
 }
 
 .card-wrap {
+    width: calc((100% - 3 * 24px) / 4);
+
     background-color: var(--white-color);
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
@@ -254,12 +264,10 @@ ul {
 }
 .pic-wrapper {
     width: calc((100% - 2 * 24px) / 3);
-
-
-    border: 1px solid var(--CORNFLOWER, #E7E9FC);
 }
 .list-picture {
     padding: 32px 16px;
+    border: 1px solid var(--CORNFLOWER, #E7E9FC);
 }
 
 /* #endregion Our Portfolio */
@@ -269,9 +277,6 @@ ul {
     padding: 100px 0;
 
     background-color: var(--secondary-color-text); 
-}
-.qoute-link {
-    width: 264px;
 }
 .wrapper {
     margin-bottom: 16px;
@@ -287,6 +292,8 @@ ul {
     color: var(--color-hover);
 }
 .wrapper-text {
+    max-width: 264px;
+
     line-height: 1.5;
     letter-spacing: 0.02em;
 
